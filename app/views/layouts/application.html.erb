@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>KottansApi</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <head>
+  <div class="registration">
+    <% if user_signed_in? %>
+      <%= current_user.email %><br>
+      <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+    <% else %>
+      <span><%= link_to "Cabinet", '#' %></span>
+    <% end %>
+  </div>
+  </head>
+    <%= yield %>
+    <footer>
+
+    </footer>
+  </body>
+</html>
