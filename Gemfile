@@ -25,7 +25,6 @@ gem 'jbuilder', '~> 2.5'
 gem 'active_model_serializers', '~> 0.10.0'
 gem 'devise'
 gem 'doorkeeper'
-gem 'rspec', '~> 3.4'
 gem 'whenever', :require => false
 gem 'faraday', '~> 0.9.2'
 gem 'dotenv-rails', :groups => [:development, :test]
@@ -41,6 +40,7 @@ gem 'oj'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'rspec', '~> 3.4'
 end
 
 group :development do
@@ -50,6 +50,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'pry'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

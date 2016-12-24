@@ -1,4 +1,28 @@
 <h2>Weather observation</h2>
+<div class="">
+  <table>
+    <tbody>
+      <tr>
+        <th><%= "Temp" %></th>
+        <th><%= "Pressure" %></th>
+        <th><%= "Humidity" %></th>
+      </tr>
+      <% @observations.each do |observation| %>
+      <tr>
+        <td><%= observation.temp %></td>
+        <td><%= observation.pressure %></td>
+        <td><%= observation.humidity %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
   <div class="">
-    <%= @observations %>
+  <label>Request</label>
+    <%= form_tag(@observation, action: "create") do %>
+      <%= text_field_tag(:city) %>
+      <%= hidden_field_tag :user_id, current_user.id %>
+      <%= submit_tag("Go") %>
+    <% end %>
   </div>

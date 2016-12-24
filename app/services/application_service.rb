@@ -1,5 +1,5 @@
 class ApplicationService
-  attr_reader :temp, :humidity, :pressure, :errors
+  attr_reader :temp, :humidity, :pressure, :errors, :city
 
   def self.call(*arguments)
     new(*arguments).tap(&:perform)
@@ -21,7 +21,7 @@ class ApplicationService
   private
 
   def initialize(*_arguments)
-    @errors = ServiceErrors.new
+    @errors = ErrorsService.new
   end
 
   def executing
