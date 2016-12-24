@@ -1,5 +1,5 @@
 class Api::UsersController < ApplicationController
-  before_action :doorkeeper_authorize!
+  before_action :doorkeeper_authorize!, if: :api_request?
 
   def show
     render json: current_resource_owner.as_json

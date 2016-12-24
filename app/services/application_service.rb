@@ -1,6 +1,4 @@
 class ApplicationService
-  attr_reader :temp, :humidity, :pressure, :errors, :city
-
   def self.call(*arguments)
     new(*arguments).tap(&:perform)
   end
@@ -29,5 +27,6 @@ class ApplicationService
   end
 
   def failure_callback
+    nil
   end
 end
