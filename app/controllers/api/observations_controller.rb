@@ -1,7 +1,7 @@
 class Api::ObservationsController < ApplicationController
   before_action :doorkeeper_authorize!, if: :api_request?
     def index
-      render json: Observation.all, adapter: :json_api
+      render json: SortService.(observations_params, Observation).result, adapter: :json_api
     end
 
     def create

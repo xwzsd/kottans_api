@@ -1,0 +1,41 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.openweathermap.org/data/2.5/weather?appid=532d313d6a9ec4ea93eb89696983e369&q=kiev
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - openresty
+      date:
+      - Tue, 27 Dec 2016 11:45:26 GMT
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '445'
+      connection:
+      - close
+      x-cache-key:
+      - "/data/2.5/weather?q=kiev"
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"coord":{"lon":30.52,"lat":50.43},"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04d"}],"base":"stations","main":{"temp":276.83,"pressure":1009,"humidity":74,"temp_min":276.15,"temp_max":277.15},"visibility":10000,"wind":{"speed":10,"deg":280},"clouds":{"all":75},"dt":1482836400,"sys":{"type":1,"id":7358,"message":0.0032,"country":"UA","sunrise":1482818291,"sunset":1482847241},"id":703448,"name":"Kiev","cod":200}'
+    http_version: 
+  recorded_at: Tue, 27 Dec 2016 11:45:26 GMT
+recorded_with: VCR 3.0.3
